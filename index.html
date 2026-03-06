@@ -1,87 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人網站</title>
+    <title>Portfolio | Ted | Backend & Data Architect</title>
     <style>
-        body {
-            font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #4a6fa5;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h1, h2 {
-            margin-top: 0;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #eee;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        a {
-            color: #4a6fa5;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        :root { --bg: #0b0e14; --surface: #151921; --text: #e6edf3; --dim: #8b949e; --accent: #58a6ff; --border: #30363d; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; margin: 0; padding: 0; }
+        .container { max-width: 850px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        h1 { font-size: 2.8rem; letter-spacing: -0.05em; margin-bottom: 0.5rem; }
+        h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-top: 3rem; color: var(--accent); }
+        .tagline { color: var(--accent); font-weight: 500; font-size: 1.3rem; margin-bottom: 2rem; }
+        
+        .section-content { margin-top: 1.5rem; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .card { background: var(--surface); padding: 2rem; border-radius: 8px; border: 1px solid var(--border); }
+        
+        .pill { display: inline-block; padding: 0.3rem 0.8rem; background: #21262d; border-radius: 4px; font-size: 0.85rem; margin: 0 0.5rem 0.5rem 0; border: 1px solid var(--border); color: #c9d1d9; }
+        footer { margin-top: 5rem; text-align: center; color: var(--dim); font-size: 0.9rem; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Ted</h1>
+            <div class="tagline">Backend Architecture | Data Engineering | BI Insights</div>
+        </header>
 
-    <header>
-        <h1>你好，我是Ted</h1>
-        <p>後端愛好者，熱愛學習新技術</p>
-    </header>
-
-    <main>
-        <section>
+        <section id="about">
             <h2>關於我</h2>
-            <p>我目前就在巨匠上課。</p>
+            <p>一位在後端系統與數據分析領域深耕多年的工程師。我擅長架構高併發的微服務系統，並能深入 SQL 層級進行效能調校。對我而言，程式碼不僅是邏輯的堆疊，更是解決業務痛點的工具。我享受將複雜的技術結構，簡化為可持續發展的架構，並透過數據洞察（Power BI/DAX）賦能企業決策。</p>
         </section>
 
-        <section>
-            <h2>技能</h2>
+        <section id="goals">
+            <h2>求職方向</h2>
+            <p>目前尋求能夠發揮「技術與商業洞察連結」價值的角色。我希望能貢獻於：</p>
             <ul>
-                <li>HTML / CSS</li>
-                <li>JavaScript（基礎）</li>
-                <li>Git 與 GitHub</li>
-                <li>Markdown 寫作</li>
+                <li><strong>系統架構升級：</strong> 利用 Go/C# 優化舊有架構，導入現代化技術堆疊。</li>
+                <li><strong>資料治理與分析：</strong> 建立自動化 ETL 流程與高效率的數據儀表板。</li>
+                <li><strong>技術領導：</strong> 與團隊共同成長，導入技術標準化與最佳實踐。</li>
             </ul>
         </section>
 
-        <section>
-            <h2>聯絡我</h2>
-            <p>歡迎透過以下方式與我聯繫：</p>
-            <ul>
-                <li>Email: <a href="mailto:ted@gmail.com">ted@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/ted" target="_blank">github.com/ted</a></li>
-            </ul>
+        <section id="tech">
+            <h2>技術棧</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Backend</h3>
+                    <span class="pill">Go</span> <span class="pill">C#</span> <span class="pill">Python</span>
+                </div>
+                <div class="card">
+                    <h3>Database</h3>
+                    <span class="pill">SQL Server</span> <span class="pill">MySQL</span> <span class="pill">Data Modeling</span>
+                </div>
+                <div class="card">
+                    <h3>Frontend & BI</h3>
+                    <span class="pill">Vue.js</span> <span class="pill">Power BI (DAX)</span>
+                </div>
+            </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Ted。保留所有權利。</p>
-    </footer>
-
+        <footer>
+            <p>Open to professional inquiries | [你的Email/LinkedIn]</p>
+        </footer>
+    </div>
 </body>
 </html>
